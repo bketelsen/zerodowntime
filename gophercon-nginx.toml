@@ -1,0 +1,10 @@
+[template]
+keys = [
+  "gophercon/upstream",
+]
+owner = "nginx"
+mode = "0644"
+src = "gophercon-nginx.tmpl"
+dest = "/etc/nginx/sites-enabled/gophercon.conf"
+check_cmd  = "/usr/sbin/nginx -t -c /etc/nginx/nginx.conf"
+reload_cmd = "/usr/sbin/service nginx reload"
